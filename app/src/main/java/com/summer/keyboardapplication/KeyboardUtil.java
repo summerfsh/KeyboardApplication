@@ -112,8 +112,8 @@ public class KeyboardUtil {
             if (primaryCode == Keyboard.KEYCODE_CANCEL) {// 完成
                 keyboardView.setPreviewEnabled(false);
                 hideKeyboard();
-                Toast.makeText(mContext, ed.getText().toString(),
-                        Toast.LENGTH_LONG).show();
+//                Toast.makeText(mContext, ed.getText().toString(),
+//                        Toast.LENGTH_LONG).show();
             } else if (primaryCode == Keyboard.KEYCODE_DELETE) {// 回退
                 keyboardView.setPreviewEnabled(false);
                 if (!TextUtils.isEmpty(editable)) {
