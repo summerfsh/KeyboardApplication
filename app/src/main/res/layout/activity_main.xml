@@ -1,17 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="50dp"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="50dp"
-    tools:context="com.summer.keyboardapplication.MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="随机键盘" />
+
+        <EditText
+            android:id="@+id/edit_username_random"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="用户名" />
+
+        <EditText
+            android:id="@+id/edit_psw_random"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="密码"
+            android:password="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="系统键盘" />
+
+        <EditText
+            android:id="@+id/edit_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="用户名" />
+
+        <EditText
+            android:id="@+id/edit_psw"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="密码"
+            android:password="true" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/lightblack"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:keyBackground="@drawable/btn_keyboard_key"
+            android:keyPreviewLayout="@layout/key_preview_layout"
+            android:keyTextColor="@color/white"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

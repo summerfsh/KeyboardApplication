@@ -20,6 +20,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * describe
+ * Created by hui on 2017/1/23.
+ */
 public class KeyboardUtil {
     private static final String TAG = "KeyboardUtil";
     private Activity mActivity;
@@ -36,11 +40,10 @@ public class KeyboardUtil {
 
     private EditText ed;
 
-    public KeyboardUtil(Activity mActivity, Context mContext, EditText edit) {
+    public KeyboardUtil(Activity mActivity, Context mContext) {
         this.mActivity = mActivity;
         this.mContext = mContext;
 
-        this.ed = edit;
         keyAlp = new Keyboard(mContext, R.xml.qwerty);
         keyDig = new Keyboard(mContext, R.xml.symbols);
         keyPun = new Keyboard(mContext, R.xml.interpunction);
@@ -52,6 +55,10 @@ public class KeyboardUtil {
         keyboardView.setPreviewEnabled(true);
         keyboardView.setOnKeyboardActionListener(listener);
 
+    }
+
+    public void setEd(EditText ed) {
+        this.ed = ed;
     }
 
     private OnKeyboardActionListener listener = new OnKeyboardActionListener() {

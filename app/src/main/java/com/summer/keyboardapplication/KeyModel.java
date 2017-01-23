@@ -1,5 +1,8 @@
 package com.summer.keyboardapplication;
-
+/**
+ * describe
+ * Created by hui on 2017/1/23.
+ */
 public class KeyModel {
 
 	private Integer code;
